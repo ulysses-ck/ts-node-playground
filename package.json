@@ -1,0 +1,39 @@
+{
+	"name": "ts-node-boilerplate",
+	"version": "1.0.0",
+	"description": "Boilerplate to get started using TypeScript with node",
+	"main": "index.ts",
+	"scripts": {
+		"build": "swc src -d dist",
+		"clean-win": "del-cli --force .\\dist\\*",
+		"clean": " zsh -c 'rm ./dist/*(.)'",
+		"dev": "nodemon",
+		"lint": "eslint .",
+		"prettier": "prettier --write src/**/*.ts"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"@swc/cli": "^0.1.57",
+		"@swc/core": "^1.3.23",
+		"@swc/helpers": "^0.4.14",
+		"@tsconfig/node16": "^1.0.3",
+		"@types/node": "^18.11.17",
+		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"del-cli": "^5.0.0",
+		"eslint": "^8.0.1",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-config-standard-with-typescript": "^24.0.0",
+		"eslint-plugin-import": "^2.25.2",
+		"eslint-plugin-n": "^15.0.0",
+		"eslint-plugin-promise": "^6.0.0",
+		"eslint-plugin-sonarjs": "^0.17.0",
+		"husky": "^8.0.2",
+		"prettier": "^2.8.1",
+		"regenerator-runtime": "^0.13.11",
+		"ts-node": "^10.9.1",
+		"tslib": "^2.4.1",
+		"typescript": "*"
+	}
+}

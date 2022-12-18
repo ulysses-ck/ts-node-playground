@@ -1,0 +1,18 @@
+{
+	"configurations": [
+		{
+			"name": "Debugging Typescript",
+			"program": "${workspaceFolder}/src/index.ts",
+			"outFiles": [
+				"${workspaceFolder}/dist/**/*.js",
+				"!**/node_modules/**"
+			],
+			"preLaunchTask": "build",
+			"request": "launch",
+			"skipFiles": [
+				"<node_internals>/**"
+			],
+			"type": "node",
+		}
+	]
+}
