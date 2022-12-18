@@ -34,13 +34,13 @@ pnpm install
 # generate dist directory with transpiled js
 pnpm build
 
-# remove dist directory in windows
+# remove files into dist and preserving directory for windows
 pnpm clean-win
 
-# remove dist directory in linux
+# remove files into dist and preserving directory in linux
 pnpm clean
 
-# init dev server
+# init playground
 pnpm dev
 
 # linting code with eslint
