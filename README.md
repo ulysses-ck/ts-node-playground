@@ -6,12 +6,11 @@
 
 -   TypeScript
 -   Node
--	SWC
--	Prettier
+-	  SWC
+-	  Prettier
 -   Eslint
 -   SonarJS
--   ts-node
--   nodemon
+-   chokidar
 -   husky
 
 <!-- Installation -->
