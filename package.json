@@ -4,10 +4,11 @@
 	"description": "Boilerplate to get started using TypeScript with node",
 	"main": "index.ts",
 	"scripts": {
-		"build": "swc src -d dist",
+		"start": "chokidar \"./src/**/*.ts\" -c \"pnpm dev\" -i ./node_modules/*",
+		"dev": "swc src -d dist --log-watch-compilation && node ./dist/index.js",
+		"build": "pnpm prettier && pnpm lint && swc src -d dist",
 		"clean-win": "del-cli --force .\\dist\\*",
 		"clean": " zsh -c 'rm ./dist/*(.)'",
-		"dev": "nodemon",
 		"lint": "eslint .",
 		"prettier": "prettier --write src/**/*.ts"
 	},
@@ -17,10 +18,9 @@
 	"devDependencies": {
 		"@swc/cli": "^0.1.57",
 		"@swc/core": "^1.3.23",
-		"@swc/helpers": "^0.4.14",
-		"@tsconfig/node16": "^1.0.3",
 		"@types/node": "^18.11.17",
 		"@typescript-eslint/eslint-plugin": "^5.0.0",
+		"@typescript-eslint/parser": "^5.48.1",
 		"del-cli": "^5.0.0",
 		"eslint": "^8.0.1",
 		"eslint-config-prettier": "^8.5.0",
@@ -30,11 +30,10 @@
 		"eslint-plugin-promise": "^6.0.0",
 		"eslint-plugin-sonarjs": "^0.17.0",
 		"husky": "^8.0.2",
-		"nodemon": "^2.0.20",
 		"prettier": "^2.8.1",
-		"regenerator-runtime": "^0.13.11",
-		"ts-node": "^10.9.1",
-		"tslib": "^2.4.1",
 		"typescript": "*"
+	},
+	"dependencies": {
+		"chokidar-cli": "^3.0.0"
 	}
 }
