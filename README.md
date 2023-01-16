@@ -40,7 +40,7 @@ pnpm clean-win
 pnpm clean
 
 # init playground
-pnpm dev
+pnpm start
 
 # linting code with eslint
 pnpm lint
