@@ -1,4 +1,4 @@
-# ts-node-playground-boilerplate
+# ts-node-playground
 
  A boilerplate to get started using TypeScript with linting, formatting and building features
 
